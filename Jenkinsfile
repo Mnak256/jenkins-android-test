@@ -1,1 +1,21 @@
-bat label: '', script: 'adb uninstall com.blender.mainak.jenkinsandroidtest;adb install app\\build\\outputs\\apk\\debug\\app-debug.apk'
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
