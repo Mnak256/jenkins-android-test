@@ -1,7 +1,8 @@
-def pipeline = new AndroidPipeline()
-stage('build') {
-    pipeline.build()
-}
-stage('post build') {
-    pipeline.notify('to be run on device')
+node {
+    stage('Build') {
+        sh "./gradlew build"
+    }
+    stage('Run') {
+        echo "done"
+    }
 }
