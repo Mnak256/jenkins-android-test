@@ -1,0 +1,1 @@
+bat label: '', script: 'adb uninstall com.blender.mainak.jenkinsandroidtest;adb install app\\build\\outputs\\apk\\debug\\app-debug.apk'
