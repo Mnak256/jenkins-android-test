@@ -4,17 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                build 'jenkins-android-test'
             }
         }
-        stage('Test') {
+        stage('Run on Device') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo 'will run in th future..'
             }
         }
     }
